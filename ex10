@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#define X 50
+
+typedef struct{
+	char nome[X];
+	int idade;
+	float sal;
+}Funcionario;
+
+
+
+int main(void) {
+	
+	Funcionario f[5];
+	int i;
+	
+	for(i = 0; i < 5; i++){
+	printf("Digite o nome do funcionario %d: ", i + 1);
+	scanf(" %50[^\n]s", f[i].nome);
+	fflush(stdin);
+	
+	printf("Digite a idade do funcionario %d: ", i + 1);
+	scanf(" %d", &f[i].idade);
+	
+	printf("Digite o salario do funcionario %d: ", i + 1);
+	scanf(" %f", &f[i].sal);
+	}
+	
+	for(i = 0; i < 5; i++){
+	printf("\nO nome funcionario %s: ", f[i].nome);
+	printf("\nA idade do funcionario %d: ", f[i].idade);
+	printf("\nO salario funcionario %.2f: ", f[i].sal);	
+	printf("\n");
+	}
+	
+    return 0;
+}
