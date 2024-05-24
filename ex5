@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+	typedef struct{
+		char nome[50];
+		int idade;
+		float nota;
+	}Estudante;
+	
+int main(void) {
+	
+	Estudante e;
+	
+	printf("Digite o nome do estudante: ");
+	scanf(" %50[^\n]s", e.nome);
+	fflush(stdin);
+	
+	printf("Digite a idade do estudante: ");
+	scanf(" %d", &e.idade);
+	
+	printf("Digite a nota do estudante: ");
+	scanf(" %f", &e.nota);
+	
+	printf("Nome: %s\nIdade: %d\nNota: %.2f", e.nome, e.idade, e.nota);
+	
+
+    return 0;
+}
