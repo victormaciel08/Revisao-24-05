@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#define X 3
+int main(void) {
+	
+	int num[X];
+	int i;
+	int maior = 0;
+	int menor = 0;
+
+	for(i = 0; i < X; i++){
+	printf("Digite o primeiro numero: ");
+	scanf(" %d", &num[i]);
+	}
+	
+	maior = menor = num[0];
+	
+	for(i = 0; i < X; i++){
+		if(num[i] > maior){
+			maior = num[i];
+		}
+		else if(num[i] < menor){
+			num[i] = menor;
+		}
+	}
+	printf("Maior: %d\nMenor: %d", maior, menor);
+	
+	
+    return 0;
+}
